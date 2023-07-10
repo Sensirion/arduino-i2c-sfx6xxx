@@ -1,0 +1,67 @@
+#######################################
+# Syntax Coloring Map
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+SensirionI2cSfx6xxx	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+getGasCalibration	KEYWORD2
+startO2ContinuousMeasurement	KEYWORD2
+startAirContinuousMeasurement	KEYWORD2
+startCo2ContinuousMeasurement	KEYWORD2
+startN2oContinuousMeasurement	KEYWORD2
+startArContinuousMeasurement	KEYWORD2
+startO2InAirContinuousMeasurement	KEYWORD2
+startRawThermalConductivityContinuousMeasurement	KEYWORD2
+readMeasurementDataRaw	KEYWORD2
+readMeasurementData	KEYWORD2
+readFlowRaw	KEYWORD2
+readFlow	KEYWORD2
+readRawTemperature	KEYWORD2
+readTemperature	KEYWORD2
+updateSetpoint	KEYWORD2
+readProductIdentifier	KEYWORD2
+resetPointerToMeasurementBuffer	KEYWORD2
+llupdateSetpoint	KEYWORD2
+updateInitStep	KEYWORD2
+updateCustomerGain	KEYWORD2
+llstartO2ContinuousMeasurement	KEYWORD2
+llstartAirContinuousMeasurement	KEYWORD2
+llstartCo2ContinuousMeasurement	KEYWORD2
+llstartN2oContinuousMeasurement	KEYWORD2
+llstartArContinuousMeasurement	KEYWORD2
+llstartRawThermalConductivityContinuousMeasurement	KEYWORD2
+llstartO2InAirContinuousMeasurement	KEYWORD2
+stopContinuousMeasurement	KEYWORD2
+llreadMeasurementData	KEYWORD2
+llreadFlow	KEYWORD2
+getRawTemperature	KEYWORD2
+forceOpenValve	KEYWORD2
+resetForceOpenValve	KEYWORD2
+forceCloseValve	KEYWORD2
+resetForceCloseValve	KEYWORD2
+updateGasConcentration	KEYWORD2
+prepareReadGasCalibration	KEYWORD2
+readGasCalibration	KEYWORD2
+enableRawFlowValues	KEYWORD2
+disableRawFlowValues	KEYWORD2
+signalTemperature	KEYWORD2
+signalFlow	KEYWORD2
+signalRawFlow	KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+sensor	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
