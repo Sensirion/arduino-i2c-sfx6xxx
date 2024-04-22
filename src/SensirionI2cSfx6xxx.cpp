@@ -3,7 +3,7 @@
  *
  * Generator:     sensirion-driver-generator 0.40.1
  * Product:       sfx6xxx
- * Model-Version: 2.3.0
+ * Model-Version: 2.3.1
  */
 /*
  * Copyright (c) 2024, Sensirion AG
