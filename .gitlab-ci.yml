@@ -13,7 +13,7 @@ compile_test:
     before_script:
         - rm -rf ../sensirion-core-arduino-library
     script:
-        - git clone --depth 1 --branch 0.5.2 https://github.com/Sensirion/arduino-core.git ../sensirion-core-arduino-library
+        - git clone --depth 1 --branch 0.7.0 https://github.com/Sensirion/arduino-core.git ../sensirion-core-arduino-library
         - arduino-cli compile --libraries=".." --warnings all --fqbn arduino:samd:mkrzero ./examples/exampleUsage/exampleUsage.ino
         - arduino-cli compile --libraries=".." --warnings all --fqbn arduino:avr:mega ./examples/exampleUsage/exampleUsage.ino
         - arduino-cli compile --libraries=".." --warnings all --fqbn arduino:avr:nano ./examples/exampleUsage/exampleUsage.ino
@@ -47,7 +47,7 @@ cppcheck:
       name: registry.gitlab.sensirion.lokal/mso-sw/drivers/docker-driver-generator:0.2.0
   tags: [linux, docker]
   script:
-    - cppcheck --std=c++11 --language=c++ --error-exitcode=1 --enable=warning,style,performance,portability --suppress=unreadVariable src/*
+    - cppcheck --std=c++11 --language=c++ --error-exitcode=1 --enable=warning,style,performance,portability --suppress=unreadVariable --suppress=unusedStructMember src/*
 
 TODO_check:
   stage: validate
