@@ -64,9 +64,9 @@ Use the following pin description to connect your SFX6XXX to the standard I²C b
 | 6 | green | SDA | I2C: Serial data input / output |
 
 
-
-
 The recommended voltage is 24V.
+
+> Make sure to use pull-up resistors when the used board does not include them in order to ensure a clean I2C signal. Learn more about pull-up resistors [here](https://github.com/Sensirion/arduino-i2c-different-buses-example/blob/main/i2c-pull-up-resistors-intro.md).
 
 ### Board specific wiring
 You will find pinout schematics for recommended board models below:
@@ -211,7 +211,6 @@ clang-format -i src/*.cpp src/*.h
 
 Note that differences from this formatting will result in a failed build until
 they are fixed.
-:
 
 ## License
 
