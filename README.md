@@ -194,6 +194,15 @@ You will find pinout schematics for recommended board models below:
    Plotter` via the `Tools` menu to observe the measurement values. Note that
    the `Baud Rate` in the used tool has to be set to `115200 baud`.
 
+## Notes
+### Implications of 24V power requirement
+Since most board do not provide the required 24V, the power will be provided by an external source, therefore **the sensor will be unnafected by a board power cycle**.
+
+If a measurement is running at the time when a board reset is performed, the sensor will still be measuring when the board starts back up.
+
+That is the reason why the provided example includes a `stopContinuousMeasurement()` before the call to `startO2ContinuousMeasurement()`. It will stop a potentially running measurement.
+
+
 ## Contributing
 
 **Contributions are welcome!**
