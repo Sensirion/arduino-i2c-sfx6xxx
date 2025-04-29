@@ -48,7 +48,7 @@ manager or `Add .ZIP Library`
 #### Dependencies
 * [Sensirion Core](https://github.com/Sensirion/arduino-core)
 
-## Sensor wiring
+## Connect the sensor
 
 Use the following pin description to connect your SFX6XXX to the standard I²C bus of your Arduino board:
 
@@ -176,7 +176,7 @@ You will find pinout schematics for recommended board models below:
 
 1. Install the libraries and dependencies according to [Installation of the library](#installation-of-the-library)
 
-2. Connect the SFX6XXX sensor to your Arduino as explained in [Sensor wiring](#sensor-wiring)
+2. Connect the SFX6XXX sensor to your Arduino as explained in [Connect the sensor](#connect-the-sensor)
 
 3. Open the `exampleUsage` sample project within the Arduino IDE:
 
@@ -197,12 +197,6 @@ You will find pinout schematics for recommended board models below:
 ## Contributing
 
 **Contributions are welcome!**
-
-We develop and test this driver using our company internal tools (version
-control, continuous integration, code review etc.) and automatically
-synchronize the master branch with GitHub. But this doesn't mean that we don't
-respond to issues or don't accept pull requests on GitHub. In fact, you're very
-welcome to open issues or create pull requests :)
 
 This Sensirion library uses
 [`clang-format`](https://releases.llvm.org/download.html) to standardize the
