@@ -5,6 +5,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] 
 
+## [1.1.0] - 2025-4-30
+### Fixed
+- Overflow in `signalFlow` fixed.
+
+### Changed
+- README.md documentation to mention pull-ups and power-cycling.
+- Example now calls a `stopContinuousMeasurement` before trying to start measuring.
+
+
 ## [1.0.0] - 2024-4-22
 
 ### Added
