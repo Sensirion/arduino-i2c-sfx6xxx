@@ -48,7 +48,7 @@ manager or `Add .ZIP Library`
 #### Dependencies
 * [Sensirion Core](https://github.com/Sensirion/arduino-core)
 
-## Sensor wiring
+## Connect the sensor
 
 Use the following pin description to connect your SFX6XXX to the standard I²C bus of your Arduino board:
 
@@ -64,9 +64,9 @@ Use the following pin description to connect your SFX6XXX to the standard I²C b
 | 6 | green | SDA | I2C: Serial data input / output |
 
 
-
-
 The recommended voltage is 24V.
+
+> Make sure to use pull-up resistors when the used board does not include them in order to ensure a clean I2C signal. Learn more about pull-up resistors [here](https://github.com/Sensirion/arduino-i2c-different-buses-example/blob/main/i2c-pull-up-resistors-intro.md).
 
 ### Board specific wiring
 You will find pinout schematics for recommended board models below:
@@ -176,7 +176,7 @@ You will find pinout schematics for recommended board models below:
 
 1. Install the libraries and dependencies according to [Installation of the library](#installation-of-the-library)
 
-2. Connect the SFX6XXX sensor to your Arduino as explained in [Sensor wiring](#sensor-wiring)
+2. Connect the SFX6XXX sensor to your Arduino as explained in [Connect the sensor](#connect-the-sensor)
 
 3. Open the `exampleUsage` sample project within the Arduino IDE:
 
@@ -194,15 +194,18 @@ You will find pinout schematics for recommended board models below:
    Plotter` via the `Tools` menu to observe the measurement values. Note that
    the `Baud Rate` in the used tool has to be set to `115200 baud`.
 
+## Notes
+### Implications of 24V power requirement
+Since most board do not provide the required 24V, the power will be provided by an external source, therefore **the sensor will be unnafected by a board power cycle**.
+
+If a measurement is running at the time when a board reset is performed, the sensor will still be measuring when the board starts back up.
+
+That is the reason why the provided example includes a `stopContinuousMeasurement()` before the call to `startO2ContinuousMeasurement()`. It will stop a potentially running measurement.
+
+
 ## Contributing
 
 **Contributions are welcome!**
-
-We develop and test this driver using our company internal tools (version
-control, continuous integration, code review etc.) and automatically
-synchronize the master branch with GitHub. But this doesn't mean that we don't
-respond to issues or don't accept pull requests on GitHub. In fact, you're very
-welcome to open issues or create pull requests :)
 
 This Sensirion library uses
 [`clang-format`](https://releases.llvm.org/download.html) to standardize the
@@ -217,7 +220,6 @@ clang-format -i src/*.cpp src/*.h
 
 Note that differences from this formatting will result in a failed build until
 they are fixed.
-:
 
 ## License
 
